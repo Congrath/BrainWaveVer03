@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        android:textSize="20dp"
+        android:text="MAIN"
+        />
+
+    <Button
+        android:id="@+id/change_to_main"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:text="Main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/change_to_history"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/change_to_history"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="12dp"
+        android:layout_weight="1"
+        android:text="History"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/change_to_setting" />
+
+    <Button
+        android:id="@+id/change_to_setting"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="2"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:text="Setting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:textSize="17dp"
+        android:text="Battery: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:textSize="17dp"
+        android:text="Unconnected"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="28dp"
+        android:max="7"
+        android:progress="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="56dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="104dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rdgroup"
+        android:layout_width="100dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="364dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/ALL"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:checked="true"
+            android:text="ALL" />
+
+        <RadioButton
+            android:id="@+id/RAWTP9"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="RAWTP9" />
+
+        <RadioButton
+            android:id="@+id/RAWTP10"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="RAWTP10" />
+
+        <RadioButton
+            android:id="@+id/RAWAF7"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="RAWAF7" />
+
+        <RadioButton
+            android:id="@+id/RAWAF8"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="RAWAF8" />
+
+        <RadioButton
+            android:id="@+id/AUX_R"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="AUX_R" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/value_of_data"
+        android:layout_width="236dp"
+        android:layout_height="288dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="272dp"
+        android:ellipsize="marquee"
+        android:scrollbars="vertical"
+        android:text="Here is the region for presenting all the data or the
+specific line data decided by the radio buttons defined on the right. \n
+The max number of lines are the  14 lines, after 14 lines the text region will
+begin to change to rolling format automatically.\n
+And these words are created for test."
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
